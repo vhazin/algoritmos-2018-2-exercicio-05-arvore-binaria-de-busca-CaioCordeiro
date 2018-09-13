@@ -26,3 +26,25 @@ No *inserir(int info,No *arvore){
     }
     return arvore;
 }
+int preordem(No *x){
+    if(x->info!= NULL){
+        printf("%d",x->info);
+        preordem(x->esquerda);
+        preordem(x->direita);
+    }
+    return 0;
+}
+int inordem(No *x){
+    if(x->info !=NULL){
+        inordem(x->esquerda);
+        printf("%d",x->info);
+        inordem(x->direita);
+    }
+}
+int posordem(No *x){
+    if(x->info!=NULL){
+        posordem(x->esquerda);
+        posordem(x->direita);
+        printf("%d",x->info);
+    }
+}
